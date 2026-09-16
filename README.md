@@ -1,3 +1,129 @@
 # CSCI225
 
 Place to add CSCI 225 indexes, practice assignments, homework, and project assignments.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSCI225 Homepage of Aaron Walton</title>
+</head>
+<body>
+
+    <!-- Head Area -->
+    <header>
+        <h1>CSCI225 Homepage of Aaron J. Walton</h1>
+        <nav>
+            <ul>
+                <li><a href="https://usca.edu" target="_blank">USCA Main Website</a></li>
+                <li><a href="#assignment-section">Assignment Section</a></li>
+                <li><a href="#schedule-section">Schedule Section</a></li>
+                <li><a href="https://github.com" target="_blank"> GitHub site </a></li>
+                <li><a href="https://linkedin.com" target="_blank"> LinkedIn Page</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <main>
+        
+        <!-- Introduction Section -->
+        <section class="introduction">
+            <h2>Introduction</h2>
+            <p>
+                Hello, My name is Aaron Walton and I am currently a registered student at the University of South Carolina Aiken. My 
+                major is Applied Computer Science, with a concentration in Cybersecurity. I've been in the technology field for quite a few years, 
+                coming from Richmond County Technical Career Magnet School with my pathway being Networking. I am excited to learn more about the world of coding 
+                and computer security for my career pathway!
+                <strong>Learning to code is a challenging process, but it is also exciting!</strong>
+            </p>
+            
+            <img src="https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/dragon_ball_legends_6.jpg" alt="Choice Image" width = "600">
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio">
+            <h2>Portfolio</h2>
+            <p>Here is a list of my previous projects and the technical skills I gained along the way.</p>
+            <ul>
+                <li>
+                    <strong>Personal Blog Website:</strong> 
+                    Created a basic single-page using a mix of HTML elements
+                    I learned how to format text, add headings, and other elements to decorate a page.
+                </li>
+                <li>
+                    <strong>Networking basics:</strong> 
+                    Learned how to configure different cables, as well as learn the topology of different networking structures.
+                    Used knowledge of networking and security to study and complete various lab instructions.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule-section" class="schedule">
+            <h2>Schedule</h2>
+            <p>Below, I have a simple table showing my current weekly schedule:</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Wednesday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 AM - 10:15 AM</td>
+                        <td>CSCI 225 Lecture</td>
+                        <td>CSCI 225 Lecture</td>
+                        <td>CSCI 225 Lab</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM - 12:15 PM</td>
+                        <td>Science 150</td>
+                        <td>Science 150</td>
+                        <td>Free Period</td>
+                    </tr>
+                    <tr>
+                        <td>02:00 PM - 03:15 PM</td>
+                        <td>English 202</td>
+                        <td>English 202</td>
+                        <td>Study Session</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Sidebar Area -->
+    <aside id="assignment-section">
+        <h2>Assignment</h2>
+        <ol>
+            <li><a href="Assignment1.docx" download> Assignment1.docx</a></li>
+            <li>Assignment 2 (Coming on September 16th, 2026)</li>
+            <li>Assignment 3 (Coming Soon)</li>
+        </ol>
+    </aside>
+
+    <!-- Footer Area -->
+    <footer>
+        <section class="contact-info">
+            <p><strong>Contact Information</strong></p>
+            <address>
+                Email me at: <a href="mailto:yourusername@usca.edu">Ajw62@usca.edu</a><br>
+                University of South Carolina Aiken<br>
+                471 University Pkwy, Aiken, SC 29801
+            </address>
+        </section>
+        
+        <section class="copyright">
+            <p>&copy; 2026, [Aaron Walton]. All rights reserved. <em>Usage for the class of CSCI 225.</em></p>
+        </section>
+    </footer>
+
+</body>
+</html>
