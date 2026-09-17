@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+
+    <h1>Feedback Form</h1>
+
+    <form name="feedback" action="#" method="POST">
+        
+       
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="anonymous" required><br><br>
+
+        
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" placeholder="anonymous" required><br><br>
+
+       
+        <label for="mail">Email Address:</label>
+        <input type="email" id="mail" name="mail" placeholder="name@domain.com" required><br><br>
+
+       
+        <p>Would you recommend this website?</p>
+        <input type="radio" id="recommend-yes" name="recommend" value="yes">
+        <label for="recommend-yes">Yes</label><br>
+        <input type="radio" id="recommend-no" name="recommend" value="no">
+        <label for="recommend-no">No</label><br><br>
+
+     
+        <label for="fav-site">Favorite Website:</label>
+        <select id="fav-site" name="favorite_site">
+            <option value="google">Google</option>
+            <option value="facebook">Facebook</option>
+            <option value="twitter">Twitter</option>
+            <option value="time">Time</option>
+        </select><br><br>
+
+        
+        <label for="rating">Rate the website (1 to 10):</label>
+        <input type="range" id="rating" name="rating" min="1" max="10" value="5"><br><br> 
+       
+        
+        <label for="comment">Additional Comments:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
+
+       
+        <label for="feedback-date">Date of Visit:</label>
+        <input type="date" id="feedback-date" name="feedback_date"><br><br>
+
+      
+        <label for="user-url">Your Website (URL):</label>
+        <input type="url" id="user-url" name="user_url" placeholder="https://example.com"><br><br>
+
+    
+        <label for="theme-color">Choose a theme color for our site:</label>
+        <input type="color" id="theme-color" name="theme_color" value="#ff0000"><br><br>
+
+     
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+
+</body>
+</html
