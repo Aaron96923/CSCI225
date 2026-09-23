@@ -3,66 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Form</title>
+    <title>Feedback Page</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #0cd40f;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 4px;
+        }
+       
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], select, textarea, input[type="date"], input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        .radio-group label {
+            font-weight: normal;
+            display: inline;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+    </style>
 </head>
 <body>
 
-    <h1>Feedback Form</h1>
+<div class="container">
+    <h2>About Me & Website Feedback</h2>
 
-    <form name="feedback" action="#" method="POST">
-        
-       
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" placeholder="anonymous" required><br><br>
-
-        
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" placeholder="anonymous" required><br><br>
-
-       
-        <label for="mail">Email Address:</label>
-        <input type="email" id="mail" name="mail" placeholder="name@domain.com" required><br><br>
-
-       
-        <p>Would you recommend this website?</p>
-        <input type="radio" id="recommend-yes" name="recommend" value="yes">
-        <label for="recommend-yes">Yes</label><br>
-        <input type="radio" id="recommend-no" name="recommend" value="no">
-        <label for="recommend-no">No</label><br><br>
-
-     
-        <label for="fav-site">Favorite Website:</label>
-        <select id="fav-site" name="favorite_site">
-            <option value="google">Google</option>
-            <option value="facebook">Facebook</option>
-            <option value="twitter">Twitter</option>
-            <option value="time">Time</option>
-        </select><br><br>
-
-        
-        <label for="rating">Rate the website (1 to 10):</label>
-        <input type="range" id="rating" name="rating" min="1" max="10" value="5"><br><br> 
-       
-        
-        <label for="comment">Additional Comments:</label><br>
-        <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
-
-       
-        <label for="feedback-date">Date of Visit:</label>
-        <input type="date" id="feedback-date" name="feedback_date"><br><br>
-
-      
-        <label for="user-url">Your Website (URL):</label>
-        <input type="url" id="user-url" name="user_url" placeholder="https://example.com"><br><br>
+  
+    <div class="video-container">
+        <iframe src="https://youtube.com" title="Introduction Video" allowfullscreen></iframe>
+    </div>
 
     
-        <label for="theme-color">Choose a theme color for our site:</label>
-        <input type="color" id="theme-color" name="theme_color" value="#ff0000"><br><br>
+    <form name="feedback" action="#" method="POST">
+        
+        
+        <div class="form-group">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="anonymous" required>
+        </div>
 
-     
-        <button type="submit">Submit Feedback</button>
+       
+        <div class="form-group">
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="anonymous" required>
+        </div>
+
+   
+        <div class="form-group">
+            <label for="mail">Email Address:</label>
+            <input type="email" id="mail" name="mail" placeholder="name@domain.com">
+        </div>
+
+        
+        <div class="form-group">
+            <label for="phone">Phone Number (Optional):</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+        </div>
+
+        <div class="form-group">
+            <label for="visit-date">Date of Visit:</label>
+            <input type="date" id="visit-date" name="visit_date">
+        </div>
+
+        
+        <div class="form-group">
+            <label>Would you recommend this website?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="recommend" value="yes"> Yes</label>
+                <label><input type="radio" name="recommend" value="no"> No</label>
+            </div>
+        </div>
+
+       
+        <div class="form-group">
+            <label for="fav-site">Favorite Website:</label>
+            <select id="fav-site" name="fav_site">
+                <option value="" disabled selected>Select a website...</option>
+                <option value="Google">Google</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Time">Time</option>
+            </select>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="rating">Rate the website (1 to 10):</label>
+            <input type="range" id="rating" name="rating" min="1" max="10" value="5" >
+            <output>5</output> 
+        </div>
+
+       
+        <div class="form-group">
+            <label for="comment">Additional Comments/Feedback:</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Share thoughts here..."></textarea>
+        </div>
+
+       
+        <div class="form-group">
+            <input type="submit" value="Submit Feedback">
+        </div>
 
     </form>
+</div>
 
 </body>
-</html
+</html>
