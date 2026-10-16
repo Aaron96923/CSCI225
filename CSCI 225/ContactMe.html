@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Feedback Page</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #5e78d7;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 20px;
+            background: rgb(103, 221, 217);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .video-container iframe {
+           
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 10px solid #0c39de;
+            border-radius: 4px;
+        }
+       
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], select, textarea, input[type="date"], input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        .radio-group label {
+            font-weight: normal;
+            display: inline;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }    </style>
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark w-100">
+            <h2 class="collapse">Navigation Links</h2>
+            <ul class="navbar-nav flex-row gap-3">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://usca.edu" target="_blank">USCA Main Website</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#assignment-section">Assignment Section</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#schedule-section">Schedule Section</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://github.com" target="_blank">GitHub site</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://linkedin.com" target="_blank"> LinkedIn Page</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2 class="collapse">About Me & Website Feedback</h2>
+
+      <div class="row">
+        <div class="video-container col">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Z-IF91Dx9T0?si=PCMaFBekL7-RVUCy"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+
+
+        <form name="feedback" action="#" method="POST" class="col">
+            <div class="form-floating mb-3">
+                <label for="fname">First Name*:</label>
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="anonymous" required>
+            </div>
+
+
+            <div class="form-floating mb-3">
+                <label for="lname">Last Name*:</label>
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="anonymous" required>
+            </div>
+
+
+            <div class="form-floating mb-3">
+                <label for="mail">Email Address:</label>
+                <input type="email" class="form-control" id="mail" name="mail" placeholder="name@domain.com">
+                <p class="form-text">*We'll never share your email with anyone else.</p>
+            </div>
+
+
+            <div class="form-floating mb-3">
+                <label for="phone">Phone Number (Optional):</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="123-456-7890">
+            </div>
+
+            <div class="form-group">
+                <label for="visit-date">Date of Visit:</label>
+                <input type="date" class="form-control" id="visit-date" name="visit_date">
+            </div>
+
+
+            <div class="form-group">
+                <label>Would you recommend this website?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="recommend" value="yes"> Yes</label>
+                    <label><input type="radio" name="recommend" value="no"> No</label>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="fav-site">Preferred Website:</label>
+                <select id="fav-site" name="fav_site">
+                    <option value="" disabled selected>Select a website...</option>
+                    <option value="Google">Google</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Time">Time</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="rating">How would you rate the website? (1 to 10):</label>
+                <input type="range" id="rating" name="rating" min="1" max="10" value="5">
+                <output>10</output>
+            </div>
+
+
+            <div class="form-group">
+                <label for="comment">Additional Comments/Feedback:</label>
+                <textarea id="comment" name="comment" rows="10" cols="500" placeholder="Share thoughts here..."></textarea>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Submit Feedback">
+            </div>
+
+        </form>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>
