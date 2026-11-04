@@ -1,0 +1,95 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Font & Color */
+p {
+    font-family: 'Roboto', sans-serif; /* Replace with your picked web font */
+    line-height: 1.5;                 /* Set line height */
+    text-align: left;                 /* Set text-align */
+}
+
+ul, ol, li {
+    color: #333333;                   /* Pick a font color */
+    font-weight: bold;                /* Pick a font weight */
+}
+
+
+h1, h2, h3, h4, h5, h6 {             /* Specify your elements, e.g., h1 or span */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.shadow-element {                    /* Replace with your specific selector */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    color: #0066cc;                   /* Special style: color/decoration */
+}
+
+a:hover {
+    color: #ff5733;                   /* Style when mouse hovers over link */
+    text-decoration: underline;
+}
+
+/* List */
+nav ul {
+    list-style: none;
+    display: flex;                    /* Display navigation list in one line */
+    gap: 15px;
+}
+
+ul.custom-marker li {
+    list-style-image: url('marker.png'); /* Specify an image as list-item marker */
+}
+
+/* Background image & color */
+body {
+    background-image: url('background.jpg'); /* Place a background image to body */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer {
+    background-color: #222222;        /* Place a background color to footer */
+}
+
+/* Border */
+.rounded-box, img, button {          /* Add rounded corner borders to chosen elements */
+    border-radius: 8px;
+}
+
+/* Selector Practice */
+p::first-letter {
+    font-size: 200%;                  /* Give a special style to the first letter of all paragraphs */
+    font-weight: bold;
+    color: #b12704;
+}
+
+#portfolio p:first-of-type {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for first paragraph in portfolio section */
+}
+
+table.schedule tr:nth-child(even) {
+    background-color: #f9f9f9;        /* Style even rows of a table with a background color */
+}
+
+/* Table: Course Schedule */
+table.schedule {
+    border: 1px solid #dddddd;        /* Border */
+    width: 100%;
+    border-collapse: collapse;
+    empty-cells: hide;                /* empty-cells */
+}
+
+table.schedule th,
+table.schedule td {
+    padding: 8px 12px;                /* Padding */
+    vertical-align: middle;           /* Vertical-align */
+    border: 1px solid #dddddd;
+}

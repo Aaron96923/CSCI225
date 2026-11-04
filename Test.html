@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reactive Homepage</title>
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #f4f4f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --primary: #4f46e5;
+            --primary-hover: #4338ca;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary), #818cf8);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        #live-clock {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+
+        /* Interactive Control Panel */
+        .controls {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Responsive Grid for Cards */
+        .grid {
+            display: grid;
+            /* Automatically adjusts columns based on screen width */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header>
+            <h1 id="greeting">Welcome Back!</h1>
+            <p>Your centralized dashboard for daily tasks and quick links.</p>
+            <div id="live-clock">Loading clock...</div>
+        </header>
+
+        <!-- Reactive Controls -->
+        <div class="controls">
+            <button class="btn" onclick="changeGreeting()">Change Greeting</button>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid">
+            <div class="card">
+                <h3>Quick Links</h3>
+                <p>Pin your most frequently used websites and internal tools here for rapid access.</p>
+            </div>
+            <div class="card">
+                <h3>Analytics Overview</h3>
+                <p>Reactive state can dynamically populate charts, metrics, or recent activity feeds.</p>
+            </div>
+            <div class="card">
+                <h3>System Status</h3>
+                <p>All core services are running smoothly with zero reported latency issues.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Reactive Live Clock
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('live-clock').innerText = `Current Time: ${timeString}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call
+
+        // 2. Interactive Greeting Changer
+        function changeGreeting() {
+            const greetings = [
+                "Hello, Ready to Build?", 
+                "Welcome Back, Creator!", 
+                "Let's Make Something Great Today.", 
+                "Good Day to Code!"
+            ];
+            const randomIndex = Math.floor(Math.random() * greetings.length);
+            document.getElementById('greeting').innerText = greetings[randomIndex];
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light;
+    font-family: "Nunito Sans", "Segoe UI", sans-serif;
+    color: #233247;
+    background: #eaf1f5;
+}
+
+body {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2rem clamp(1rem, 4vw, 3rem);
+    background-color: #f5f8fa;
+    background-image:
+        linear-gradient(135deg, rgba(220, 237, 241, 0.94), rgba(247, 249, 250, 0.97)),
+        radial-gradient(circle at 10% 10%, #9dd5d0, transparent 38%);
+    line-height: 1.7;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header,
+main,
+aside,
+footer {
+    margin-bottom: 1.5rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid #d5e0e7;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 24px rgba(35, 50, 71, 0.08);
+}
+
+#schedule-section,
+#assignment-section {
+    scroll-margin-top: 1.5rem;
+    transition: border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+}
+
+#schedule-section:target,
+#assignment-section:target {
+    border-color: #087e83;
+    background-color: #effafa;
+    box-shadow: 0 0 0 4px rgba(8, 126, 131, 0.2), 0 12px 30px rgba(8, 126, 131, 0.16);
+}
+
+h1,
+h2 {
+    color: #163f52;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 3px rgba(22, 63, 82, 0.16);
+}
+
+h1 {
+    margin-top: 0;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+p {
+    margin: 0 0 1rem;
+    font-family: "Nunito Sans", "Segoe UI", sans-serif;
+    line-height: 1.8;
+    text-align: left;
+}
+
+p::first-letter {
+    color: #087e83;
+    font-size: 1.35em;
+    font-weight: 800;
+}
+
+.portfolio > p:first-of-type {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(8, 126, 131, 0.16);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main ul,
+aside ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    color: #285d70;
+    font-weight: 700;
+}
+
+.portfolio ul {
+    list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Ccircle cx='6' cy='6' r='4' fill='%23087e83'/%3E%3C/svg%3E");
+}
+
+.portfolio li {
+    padding: 0.5rem 0.65rem;
+    border-radius: 8px;
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.portfolio li:hover,
+.portfolio li:focus-within {
+    color: #163f52;
+    background-color: #e3f2f1;
+    transform: translateX(4px);
+}
+
+a {
+    color: #087e83;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: #a94722;
+    text-decoration: underline;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.35rem 0.55rem;
+    border-radius: 6px;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #e3f2f1;
+    transform: translateY(-2px);
+}
+
+.introduction img {
+    display: block;
+    width: min(100%, 600px);
+    height: auto;
+    margin: 1.5rem auto 0;
+    border: 4px solid #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(35, 50, 71, 0.16);
+}
+
+.schedule {
+    overflow-x: auto;
+}
+
+.schedule table {
+    width: 100%;
+    border: 1px solid #b9cbd3;
+    border-collapse: collapse;
+    empty-cells: show;
+    text-align: left;
+}
+
+.schedule th,
+.schedule td {
+    padding: 0.75rem 1rem;
+    border: 1px solid #b9cbd3;
+    vertical-align: middle;
+}
+
+.schedule thead {
+    color: #fff;
+    background: #1d6571;
+}
+
+.schedule tbody tr:nth-child(even) {
+    background-color: #e7f2f2;
+}
+
+.schedule tbody tr {
+    transition: background-color 180ms ease;
+}
+
+.schedule tbody tr:hover {
+    background-color: #d3ece9;
+}
+
+.schedule tbody th {
+    color: #233247;
+    background: #f3f7f8;
+    font-weight: 700;
+}
+
+footer {
+    color: #edf5f5;
+    background-color: #163f52;
+}
+
+footer h2,
+footer a {
+    color: #a8e0d9;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    #schedule-section:target,
+    #assignment-section:target {
+        animation: target-highlight 700ms ease-out;
+    }
+
+    header,
+    main,
+    aside,
+    footer {
+        animation: arrive 500ms ease-out both;
+    }
+
+    main {
+        animation-delay: 80ms;
+    }
+
+    aside {
+        animation-delay: 140ms;
+    }
+
+    footer {
+        animation-delay: 200ms;
+    }
+
+    @keyframes arrive {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes target-highlight {
+        0% {
+            box-shadow: 0 0 0 0 rgba(8, 126, 131, 0.45);
+        }
+
+        100% {
+            box-shadow: 0 0 0 4px rgba(8, 126, 131, 0.2), 0 12px 30px rgba(8, 126, 131, 0.16);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
