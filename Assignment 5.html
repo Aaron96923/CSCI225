@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI and Calorie Calculator</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>BMI & Daily Calorie Calculator</h1>
+    
+    <!-- User Inputs -->
+    <div class="form-group">
+        <label for="weight">Weight (kg):</label>
+        <input type="text" id="weight" placeholder="e.g., 75">
+    </div>
+
+    <div class="form-group">
+        <label for="height">Height (cm):</label>
+        <input type="text" id="height" placeholder="e.g., 175">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" placeholder="e.g., 30">
+    </div>
+
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="Men">Men</option>
+            <option value="Women">Women</option>
+        </select>
+    </div>
+
+    <!-- Action Buttons -->
+    <button id="calculate-btn">Calculate BMI & Calories</button>
+    <button id="generate-btn">Generate Meal Plan</button>
+    <p id="error-msg" class="error"></p>
+
+    <!-- Results and BMI Visual Animation -->
+    <div class="results-section">
+        <div class="stats-box">
+            <h2>Your Results</h2>
+            <p><strong>BMI:</strong> <span id="bmi-output">--</span></p>
+            <p><strong>Category:</strong> <span id="category-output">--</span></p>
+            <p><strong>Daily Calorie Target:</strong> <span id="calorie-output">--</span> kcal</p>
+        </div>
+
+        <div class="animation-box">
+            <svg id="person-visual" viewBox="0 0 100 200" preserveAspectRatio="none">
+                <circle cx="50" cy="25" r="18" fill="#34495e" />
+                <rect x="25" y="48" width="50" height="75" rx="15" fill="#3498db" />
+                <rect x="8" y="50" width="12" height="65" rx="6" fill="#3498db" />
+                <rect x="80" y="50" width="12" height="65" rx="6" fill="#3498db" />
+                <rect x="28" y="125" width="18" height="70" rx="8" fill="#2c3e50" />
+                <rect x="54" y="125" width="18" height="70" rx="8" fill="#2c3e50" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Suggested Meal Plan Output -->
+    <div class="meal-section">
+        <h2>Suggested Daily Meal Plan</h2>
+        <ul id="meal-list">
+            <li>Enter your details above and click Calculate to see your meal plan.</li>
+        </ul>
+        <p><strong>Total Meal Plan Calories:</strong> <span id="total-meal-calories">0</span> kcal</p>
+    </div>
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>
